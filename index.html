@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NFC Game</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 100px;
+    }
+    .card {
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      background: #f2f2f2;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>NFC Millionaire Game</h1>
+    <h2 id="player">Loading...</h2>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    if (id) {
+      document.getElementById("player").innerText = "Player ID: " + id;
+    } else {
+      document.getElementById("player").innerText = "No Player ID Found";
+    }
+  </script>
+
+</body>
+</html>
